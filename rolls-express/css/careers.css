@@ -1,0 +1,155 @@
+/* CAREERS PAGE */
+
+.re-careers-main {
+  background: #5f1e78;
+  padding: 1.25rem 0 0;
+  min-height: calc(100vh - 160px);
+}
+
+.re-topbar {
+  align-items: center !important;
+}
+
+.re-header-actions {
+  padding-top: 0.45rem;
+}
+
+.re-orderbtn-header {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.re-careers-wrap {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* PANEL */
+
+.re-careers-panel-wrap {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  padding-bottom: 2.25rem;
+}
+
+.re-careers-panel-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #b46cf0 0%, #a768e2 55%, #965bd3 100%);
+  z-index: 0;
+}
+
+.re-careers-panel {
+  position: relative;
+  z-index: 1;
+  background: #652080;
+  min-height: 780px;
+  padding: 6rem 3rem 4rem;
+  box-shadow: -10px 10px 18px rgba(55, 10, 75, 0.35);
+}
+
+/* HERO */
+
+.re-careers-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  min-height: 230px;
+}
+
+.re-careers-logo {
+  position: relative;
+  z-index: 1;
+  width: min(360px, 42%);
+  max-width: 100%;
+  display: block;
+  opacity: 0.95;
+}
+
+.re-careers-title {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: clamp(3rem, 5vw, 4.7rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0.3px;
+  margin-left: -6.5rem;
+}
+
+/* JOB GRID */
+
+.re-careers-grid {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.re-job-card {
+  min-height: 150px;
+  border-radius: 18px;
+  padding: 1rem 1rem 0.9rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.re-job-card-dark {
+  background: linear-gradient(180deg, #650030 0%, #5b0032 100%);
+}
+
+.re-job-card-light {
+  background: linear-gradient(180deg, #8a0059 0%, #76004d 100%);
+}
+
+.re-job-card h2 {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.re-job-card p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+/* FOOTER ACTIVE LINK */
+
+.active-footer {
+  background: #a96be5;
+  padding: 0.2rem 0.45rem;
+  display: inline-block !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767.98px) {
+  .re-careers-hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .re-careers-title {
+    font-size: clamp(2.4rem, 9vw, 3.25rem);
+    margin-left: 3rem;
+    margin-top: -1rem;
+  }
+
+  .re-careers-logo {
+    width: min(300px, 82%);
+  }
+}

@@ -1,0 +1,259 @@
+/* LOCATIONS PAGE */
+
+.re-locations-main {
+  background: #5f1e78;
+  padding: 1.5rem 0 0;
+  min-height: calc(100vh - 160px);
+}
+
+.re-topbar {
+  align-items: center !important;
+}
+
+.re-header-actions {
+  padding-top: 0.5rem;
+}
+
+.re-orderbtn-header {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.re-locations-wrap {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+
+/* PAGE LAYOUT */
+
+.re-locations-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+
+/* LEFT SIDE IMAGES */
+
+.re-side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  padding-top: 2.2rem;
+}
+
+.re-side-img {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+
+/* RIGHT PANEL */
+
+.re-locations-panel-wrap {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.re-locations-panel-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 89%;
+  height: 100%;
+  background: linear-gradient(90deg, #b46cf0 0%, #9f63dc 55%, #945bd1 100%);
+  z-index: 0;
+}
+
+.re-locations-panel {
+  position: relative;
+  z-index: 1;
+  background: #652080;
+  min-height: 780px;
+  padding: 6rem 3rem 4rem;
+  box-shadow: -10px 10px 18px rgba(55, 10, 75, 0.35);
+}
+
+
+/* TITLE */
+
+.re-locations-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+
+/* LOGO + LOCATION TEXT */
+
+.re-logo-feature {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.re-logo-feature img {
+  width: min(650px, 80%);
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Location columns OVER the logo */
+
+.re-location-columns {
+  position: absolute;
+
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  width: 85%;
+  max-width: 900px;
+}
+
+.re-location-item {
+  border-left: 2px solid rgba(91, 220, 255, 0.45);
+  padding-left: 10px;
+}
+
+.re-location-number {
+  display: block;
+  color: #4ee7ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.re-location-item h2 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.re-location-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+
+/* MAP */
+
+.re-map-wrap {
+  width: fit-content;
+  margin: 0 auto;
+  border: 4px solid rgba(139, 92, 120, 0.55);
+  background: transparent;
+}
+
+.re-map-wrap img {
+  margin-left: 10rem;
+  opacity: 50%;
+  max-width: 60%;
+}
+
+
+/* FOOTER ACTIVE LINK */
+
+.active-footer {
+  background: #a96be5;
+  padding: 0.2rem 0.45rem;
+  display: inline-block !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+
+  .re-locations-layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .re-locations-panel {
+    padding: 4rem 2rem 3rem;
+  }
+
+  .re-location-columns {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    top: 40%;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .re-locations-wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .re-locations-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .re-side-images {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .re-side-img {
+    max-width: 280px;
+  }
+
+  .re-locations-panel-wrap {
+    padding-right: 0;
+  }
+
+  .re-locations-panel-bg {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .re-location-columns {
+    grid-template-columns: 1fr;
+    top: 50%;
+  }
+
+  .re-side-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .re-locations-panel {
+    padding: 3rem 1.25rem 2rem;
+  }
+
+  .re-logo-feature img {
+    width: 95%;
+  }
+
+}

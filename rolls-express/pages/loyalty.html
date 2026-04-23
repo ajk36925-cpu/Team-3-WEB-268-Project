@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolls Express - Loyalty Program</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <!-- Loyalty Page CSS -->
+  <link rel="stylesheet" href="../css/loyalty.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body class="re-body">
+
+ <!-- Header -->
+  <header class="re-header py-3">
+    <div class="container-xl">
+      <div class="d-flex align-items-start gap-3 flex-wrap">
+		  
+		  
+
+        <!-- Logo LEFT -->
+        <a class="re-logo text-decoration-none" href="../index.html" aria-label="Rolls Express Home">
+          <div class="re-logo-box">
+          <img src="../assets/icons/logo.png" width="111" height="106" alt=""/> </div>
+        </a>
+		  
+
+        <!-- Navbar MIDDLE -->
+        <nav class="navbar navbar-expand-lg re-nav p-0">
+          <div class="container-fluid p-0">
+
+            <!-- Mobile toggle for Nav Bar -->
+            <button class="navbar-toggler re-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav align-items-lg-center gap-lg-2 re-navlist">
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="../index.html">Home</a>
+                </li>
+
+                <!-- MENU  -->
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="menu.html">Menu</a>
+                </li>
+
+                <!-- ORDER (Has a dropdown with Order Online and Catering) -->
+                <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle re-navlink" href="#"
+					 onclick="return false;"
+					 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Order
+				  </a>
+				  <ul class="dropdown-menu re-dropdown">
+					<li><a class="dropdown-item re-dditem" href="order-online.html">Order Online</a></li>
+					<li><a class="dropdown-item re-dditem" href="catering.html">Catering</a></li>
+				  </ul>
+				</li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink active" href="loyalty.html">Loyalty Program</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="locations.html">Locations</a>
+                </li>
+
+                <!-- ABOUT US (Had a dropdown with Contact Us) -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink" href="about.html"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item re-dditem" href="contact.html">Contact Us</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                  <a class="btn re-cta" href="login.html">Log In/Sign Up</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+		  
+		  
+		  <!--Icons RIGHT -->
+		  <div class="d-flex ms-auto align-items-center gap-3">
+              <a class="btn re-orderbtn" href="order-online.html">Order Now</a>
+
+              <a class="re-cart text-decoration-none" href="cart.html" aria-label="View cart">
+                <div class="re-cart-inner">
+                  <div class="re-cart-icon" aria-hidden="true"><img src="../assets\icons\basket-shopping-solid-full.svg" alt="Basket Icon" class="re-icon"></div>
+                  <div class="re-cart-count">(0)</div>
+                  <div class="re-cart-label">Cart</div>
+                </div>
+              </a>
+            </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="re-panel loyalty-page py-4">
+    <div class="container-xl">
+
+      <!-- Top Intro Row -->
+      <section class="loyalty-hero row g-4 align-items-stretch">
+        <div class="col-12 col-lg-6">
+          <div class="loyalty-intro h-100">
+            <p class="loyalty-kicker mb-2">Rolls Express Rewards</p>
+            <h1 class="loyalty-title mb-3">Make every visit more rewarding.</h1>
+            <p class="loyalty-text mb-4">
+              Join our Loyalty Program and enjoy exclusive rewards, savings, and special offers
+              every time you stop by.
+            </p>
+
+            <div class="loyalty-highlights">
+              <div class="loyalty-highlight-box">
+                <span class="highlight-number">5</span>
+                <span class="highlight-label">Visits</span>
+              </div>
+              <div class="loyalty-highlight-box">
+                <span class="highlight-number">20%</span>
+                <span class="highlight-label">Off Reward</span>
+              </div>
+              <div class="loyalty-highlight-box">
+                <span class="highlight-number">Bonus</span>
+                <span class="highlight-label">Member Offers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="loyalty-graphic-card h-100">
+            <h2 class="loyalty-card-title">Loyalty Reward Card</h2>
+
+            <div class="loyalty-graphic-wrapper">
+			  <img 
+				src="../assets/images/RewardCard.png" 
+				alt="Rolls Express Loyalty Reward Card" 
+				class="loyalty-graphic-img"
+			  />
+			</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rewards Section -->
+      <section class="loyalty-rewards-section mt-5">
+        <h2 class="section-heading text-center mb-4">Why Join?</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="loyalty-feature-card h-100">
+              <div class="feature-icon">01</div>
+              <h3 class="feature-title">Earn Rewards Faster</h3>
+              <p class="feature-text mb-0">
+                Track visits and unlock savings after repeat orders with our easy loyalty system.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="loyalty-feature-card h-100">
+              <div class="feature-icon">02</div>
+              <h3 class="feature-title">Exclusive Offers</h3>
+              <p class="feature-text mb-0">
+                Enjoy members-only promotions, featured discounts, and limited-time specials.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="loyalty-feature-card h-100">
+              <div class="feature-icon">03</div>
+              <h3 class="feature-title">More Value Every Visit</h3>
+              <p class="feature-text mb-0">
+                Whether you dine in or take out, your visits can lead to real rewards.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="loyalty-cta-section mt-5">
+        <div class="loyalty-cta-box text-center">
+          <h2 class="mb-3">Ready to start earning?</h2>
+          <p class="mb-4">
+            Sign up today and start collecting visits toward your next reward.
+          </p>
+          <a class="btn re-cta loyalty-signup-btn" href="login.html">Join the Loyalty Program</a>
+        </div>
+      </section>
+
+    </div>
+  
+<div class="container-xl pb-4"><div class="alert alert-light" data-loyalty-summary></div></div>
+</main>
+
+   <footer class="re-footer py-4 mt-3">
+  <div class="container-xl">
+    <div class="row g-3 align-items-end">
+
+      <div class="col-12 col-lg-4">
+        <div class="row g-3">
+          <div class="col-6">
+            <a class="re-footerlink d-block mb-2" href="locations.html">Locations</a>
+            <a class="re-footerlink d-block mb-2" href="about.html">About Us</a>
+            <a class="re-footerlink d-block re-footerlink-active" href="contact.html">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
+            <a class="re-footerlink d-block mb-2" href="careers.html">Careers</a>
+            <a class="re-footerlink d-block" href="catering.html">Catering</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center">
+        <div class="re-copy mb-2">Copyright © 2026 Rolls Express</div>
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+          <a class="re-legal" href="terms.html">Terms of Use</a>
+          <a class="re-legal" href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+
+      <!-- CLEAN SOCIAL ICONS (only one set) -->
+      <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
+
+        <a class="re-social" 
+           href="https://www.facebook.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/facebook-brands-solid-full.svg" class="re-social-icon" alt="Facebook">
+        </a>
+
+        <a class="re-social" 
+           href="https://www.instagram.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/instagram-brands-solid-full.svg" class="re-social-icon" alt="Instagram">
+        </a>
+
+        <a class="re-social" 
+           href="https://www.tiktok.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/tiktok-brands-solid-full.svg" class="re-social-icon" alt="TikTok">
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolls Express - Cart</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <!-- Cart Page CSS -->
+  <link rel="stylesheet" href="../css/cart.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body class="re-body">
+
+  <!-- Header -->
+  <header class="re-header py-3">
+    <div class="container-xl">
+      <div class="d-flex align-items-start gap-3 flex-wrap">
+		  
+		  
+
+        <!-- Logo LEFT -->
+        <a class="re-logo text-decoration-none" href="../index.html" aria-label="Rolls Express Home">
+          <div class="re-logo-box">
+          <img src="../assets/icons/logo.png" width="111" height="106" alt=""/> </div>
+        </a>
+		  
+
+        <!-- Navbar MIDDLE -->
+        <nav class="navbar navbar-expand-lg re-nav p-0">
+          <div class="container-fluid p-0">
+
+            <!-- Mobile toggle for Nav Bar -->
+            <button class="navbar-toggler re-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav align-items-lg-center gap-lg-2 re-navlist">
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="../index.html">Home</a>
+                </li>
+
+                <!-- MENU  -->
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="menu.html">Menu</a>
+                </li>
+
+                <!-- ORDER (Has a dropdown with Order Online and Catering) -->
+                <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle re-navlink" href="#"
+					 onclick="return false;"
+					 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Order
+				  </a>
+				  <ul class="dropdown-menu re-dropdown">
+					<li><a class="dropdown-item re-dditem" href="order-online.html">Order Online</a></li>
+					<li><a class="dropdown-item re-dditem" href="catering.html">Catering</a></li>
+				  </ul>
+				</li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="loyalty.html">Loyalty Program</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="locations.html">Locations</a>
+                </li>
+
+                <!-- ABOUT US (Had a dropdown with Contact Us) -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink" href="about.html"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item re-dditem" href="contact.html">Contact Us</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                  <a class="btn re-cta" href="login.html">Log In/Sign Up</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+		  
+		  
+		  <!--Icons RIGHT -->
+		  <div class="d-flex ms-auto align-items-center gap-3">
+              <a class="btn re-orderbtn" href="order-online.html">Order Now</a>
+
+              <a class="re-cart text-decoration-none re-cart-active" href="cart.html" aria-label="View cart">
+                <div class="re-cart-inner">
+                  <div class="re-cart-icon" aria-hidden="true"><img src="../assets\icons\basket-shopping-solid-full.svg" alt="Basket Icon" class="re-icon"></div>
+                  <div class="re-cart-count">(0)</div>
+                  <div class="re-cart-label">Cart</div>
+                </div>
+              </a>
+            </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="re-cart-main">
+    <div class="container-xl">
+
+      <section class="re-cart-panel">
+        <div class="re-cart-panel-inner">
+
+          <div class="re-cart-page-head">
+            <h1 class="re-cart-title">Your Cart</h1>
+            <p class="re-cart-subtitle">Review your selected items before submitting your order request.</p>
+          </div>
+
+          <!-- EMPTY CART STATE -->
+          <section class="re-cart-empty-state">
+            <div class="re-cart-empty-icon">
+              <img src="../assets/icons/basket-shopping-solid-full.svg" alt="Cart icon" class="re-icon">
+            </div>
+
+            <h2 class="re-cart-empty-heading">There are currently no items in your cart.</h2>
+
+            <p class="re-cart-empty-text">
+              Once items are added from the online ordering page, they will appear here for review and editing.
+            </p>
+
+            <a class="btn re-cart-start-btn" href="order-online.html">
+              Click here to start your order
+            </a>
+          </section>
+
+          <!-- FUTURE CART CONTENT STARTER
+               Remove "d-none" later when cart functionality is added -->
+          <section class="re-cart-content d-none">
+            <div class="row g-4">
+              <div class="col-12 col-lg-8">
+                <div class="re-cart-items-box">
+                  <h2 class="re-cart-section-title">Cart Items</h2>
+
+                  <article class="re-cart-item">
+                    <div class="re-cart-item-image-wrap">
+                      <img
+                        src="../assets/Placeholders/CardItem.png"
+                        alt="Cart item placeholder"
+                        class="re-cart-item-image"
+                      />
+                    </div>
+
+                    <div class="re-cart-item-details">
+                      <h3 class="re-cart-item-title">Item Name</h3>
+                      <p class="re-cart-item-desc">Item details or selected options would appear here.</p>
+
+                      <div class="re-cart-item-controls">
+                        <label for="qty1" class="re-cart-label-small">Qty</label>
+                        <input id="qty1" type="number" min="1" value="1" class="re-cart-qty-input" />
+
+                        <button type="button" class="btn re-cart-edit-btn">Edit</button>
+                        <button type="button" class="btn re-cart-remove-btn">Remove</button>
+                      </div>
+                    </div>
+
+                    <div class="re-cart-item-price">$0.00</div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <aside class="re-cart-summary-box">
+                  <h2 class="re-cart-section-title">Order Summary</h2>
+
+                  <div class="re-cart-summary-row">
+                    <span>Items</span>
+                    <span>1</span>
+                  </div>
+
+                  <div class="re-cart-summary-row">
+                    <span>Total</span>
+                    <span>$0.00</span>
+                  </div>
+
+                  <a class="btn re-cart-submit-btn w-100" href="#">
+                    Order Now
+                  </a>
+                </aside>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="re-footer py-4 mt-3">
+    <div class="container-xl">
+      <div class="row g-3 align-items-end">
+
+        <div class="col-12 col-lg-4">
+          <div class="row g-3">
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="locations.html">Locations</a>
+              <a class="re-footerlink d-block mb-2" href="about.html">About Us</a>
+              <a class="re-footerlink d-block" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
+              <a class="re-footerlink d-block mb-2" href="careers.html">Careers</a>
+              <a class="re-footerlink d-block" href="catering.html">Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5 text-center">
+          <div class="re-copy mb-2">Copyright © 2026 Rolls Express</div>
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a class="re-legal" href="terms.html">Terms of Use</a>
+            <a class="re-legal" href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
+          <a class="re-social" href="#" aria-label="Facebook">
+            <img src="../assets/icons/facebook-brands-solid-full.svg" alt="Facebook Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="Instagram">
+            <img src="../assets/icons/instagram-brands-solid-full.svg" alt="Instagram Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="TikTok">
+            <img src="../assets/icons/tiktok-brands-solid-full.svg" alt="TikTok Icon" class="re-social-icon">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

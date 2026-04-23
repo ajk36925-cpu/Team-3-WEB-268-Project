@@ -1,0 +1,73 @@
+/* MAIN WRAPPER */
+.catering-wrapper {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(128, 61, 173, 1);
+    gap: 20px;
+}
+
+/* LEFT SIDE */
+.catering-info {
+    flex: 1;
+    background-color: rgba(164, 94, 229, 0.97);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* RIGHT SIDE */
+.catering-form-section {
+    flex: 1;
+    background-color: rgba(91, 17, 55, 1);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+/* FORM FIELDS */
+.catering-form input,
+.catering-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+}
+
+.catering-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+    background-color: #fff;
+    color: rgba(91, 17, 55, 1);
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+/* REQUIREMENT BUTTONS */
+.req-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #fff;
+    color: rgba(164, 94, 229, 1);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.req-btn:hover {
+    opacity: 0.85;
+}

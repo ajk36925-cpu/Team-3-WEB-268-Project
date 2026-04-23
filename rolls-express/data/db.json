@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": "user_900d1e9a-d851-41bd-8d6b-6d287875762d",
+      "name": "Josie Example",
+      "email": "josie@example.com",
+      "passwordHash": "3de9273e88d1153033fccc7574cc168a51022a55738bff6727ae581e8c19380f",
+      "phone": "555-123-4567",
+      "address": "123 Main St",
+      "zip": "17011",
+      "loyaltyPoints": 19,
+      "loyaltyTier": "Member",
+      "createdAt": "2026-04-20T23:41:23.912Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order_64dc8816-1774-4f32-bb29-62e52598c357",
+      "customer": {
+        "name": "Josie Example",
+        "email": "josie@example.com",
+        "phone": "555-123-4567",
+        "address": "123 Main St"
+      },
+      "cart": {
+        "items": [
+          {
+            "id": "roll-1",
+            "name": "Coastal Shrimp Fresh Rolls",
+            "description": "x",
+            "price": 9.99,
+            "quantity": 2
+          }
+        ],
+        "subtotal": 19.98,
+        "tax": 1.2,
+        "total": 21.18
+      },
+      "fulfillment": {
+        "method": "Pickup",
+        "notes": "No onions"
+      },
+      "status": "Submitted",
+      "createdAt": "2026-04-20T23:41:34.736Z"
+    }
+  ],
+  "contactSubmissions": [
+    {
+      "id": "contact_2613b5e1-8821-43e3-9ab2-953c342da061",
+      "name": "Josie Example",
+      "firstName": "",
+      "lastName": "",
+      "email": "josie@example.com",
+      "phone": "555-123-4567",
+      "address": "123 Main St",
+      "message": "Hello there",
+      "createdAt": "2026-04-20T23:41:34.782Z"
+    }
+  ],
+  "cateringRequests": [],
+  "sessions": [
+    {
+      "token": "3161d250-c98c-4395-a66a-19057bcb8072",
+      "userId": "user_900d1e9a-d851-41bd-8d6b-6d287875762d",
+      "createdAt": "2026-04-20T23:41:23.941Z"
+    }
+  ]
+}

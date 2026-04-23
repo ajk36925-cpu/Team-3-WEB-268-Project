@@ -1,0 +1,74 @@
+[
+  {
+    "id": "roll-1",
+    "category": "rolls",
+    "name": "Coastal Shrimp Fresh Rolls",
+    "description": "Light and refreshing rice paper rolls filled with tender shrimp, vermicelli noodles, and crisp herbs. Served with a savory peanut dipping sauce for a perfect balance of fresh and rich.",
+    "price": 9.99,
+    "image": "assets/images/Rolls1.jpg"
+  },
+  {
+    "id": "roll-2",
+    "category": "rolls",
+    "name": "Golden Crunch Egg Rolls",
+    "description": "Crispy, golden-fried rolls packed with seasoned vegetables and wrapped to perfection. Served hot with a sweet chili dipping sauce for that irresistible crunch.",
+    "price": 7.99,
+    "image": "assets/images/Rolls2.jpg"
+  },
+  {
+    "id": "roll-3",
+    "category": "rolls",
+    "name": "Dragon Fire Sushi Roll",
+    "description": "A bold sushi roll layered with fresh fish and topped with a sweet and spicy glaze, finished with sesame seeds. Rich, flavorful, and slightly fiery with every bite.",
+    "price": 13.99,
+    "image": "assets/images/Rolls3.jpg"
+  },
+  {
+    "id": "roll-4",
+    "category": "rolls",
+    "name": "Garden Glow Veggie Rolls",
+    "description": "Vibrant rice paper rolls packed with a colorful mix of fresh vegetables and herbs. Light, crisp, and served with a refreshing dipping sauce for a clean, healthy bite.",
+    "price": 8.99,
+    "image": "assets/images/Rolls4.jpg"
+  },
+  {
+    "id": "bowl-1",
+    "category": "bowls",
+    "name": "Zesty Shrimp Power Bowl",
+    "description": "A vibrant bowl loaded with juicy shrimp, crisp vegetables, creamy avocado, and crunchy peanuts over a hearty base. Tossed in a light, zesty sauce for a fresh and satisfying bite.",
+    "price": 12.99,
+    "image": "assets/images/BowlOne.jpg"
+  },
+  {
+    "id": "bowl-2",
+    "category": "bowls",
+    "name": "Spicy Street Noodle Bowl",
+    "description": "Rich, savory noodles served in a bold, spicy broth with tender beef and hearty vegetables. Packed with deep flavor and just the right kick to warm you up.",
+    "price": 13.99,
+    "image": "assets/images/BowlTwo.jpg"
+  },
+  {
+    "id": "drink-1",
+    "category": "extras",
+    "name": "Sunset Splash Refresher",
+    "description": "A trio of vibrant, fruit-forward iced refreshers bursting with sweet and tangy flavors. Light, colorful, and perfect for cooling down with every sip.",
+    "price": 4.99,
+    "image": "assets/images/DrinkOne.jpg"
+  },
+  {
+    "id": "sauce-1",
+    "category": "extras",
+    "name": "Umami Dip Sauce",
+    "description": "A rich, savory dipping sauce with deep umami flavor and a hint of sweetness. Perfect for enhancing every bite of rolls and dumplings.",
+    "price": 0.75,
+    "image": "assets/images/SauceOne.jpg"
+  },
+  {
+    "id": "sauce-2",
+    "category": "extras",
+    "name": "Spicy Dragon Cream Sauce",
+    "description": "A creamy, bold sauce swirled with chili heat and subtle sweetness. Smooth, spicy, and addictive\u2014perfect for dipping or drizzling.",
+    "price": 0.75,
+    "image": "assets/images/SauceTwo.jpg"
+  }
+]

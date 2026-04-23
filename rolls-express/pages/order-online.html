@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolls Express - Order Online</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Shared site CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../css/order-online.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body class="re-body">
+
+  <!-- Header -->
+  <header class="re-header py-3">
+    <div class="container-xl">
+      <div class="d-flex align-items-start gap-3 flex-wrap">
+
+        <!-- Logo -->
+        <a class="re-logo text-decoration-none" href="../index.html" aria-label="Rolls Express Home">
+          <div class="re-logo-box">
+            <img src="../assets/icons/logo.png" width="111" height="106" alt="Rolls Express Logo" />
+          </div>
+        </a>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg re-nav p-0">
+          <div class="container-fluid p-0">
+
+            <button class="navbar-toggler re-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav align-items-lg-center gap-lg-2 re-navlist">
+
+			  <li class="nav-item">
+				<a class="nav-link re-navlink" href="../index.html">Home</a>
+			  </li>
+
+			  <li class="nav-item">
+				<a class="nav-link re-navlink" href="menu.html">Menu</a>
+			  </li>
+
+			 <!-- ORDER (active because this page belongs to Order) -->
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle re-navlink active" href="#"
+				 onclick="return false;"
+				 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+				Order
+			  </a>
+			  <ul class="dropdown-menu re-dropdown">
+				<li><a class="dropdown-item re-dditem" href="order-online.html">Order Online</a></li>
+				<li><a class="dropdown-item re-dditem" href="catering.html">Catering</a></li>
+			  </ul>
+			</li>
+
+			  <li class="nav-item">
+				<a class="nav-link re-navlink" href="loyalty.html">Loyalty Program</a>
+			  </li>
+
+			  <li class="nav-item">
+				<a class="nav-link re-navlink" href="locations.html">Locations</a>
+			  </li>
+
+			  <!-- ABOUT US -->
+			  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink" href="about.html"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item re-dditem" href="contact.html">Contact Us</a></li>
+                  </ul>
+                </li>
+
+			  <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+				<a class="btn re-cta" href="login.html">Log In/Sign Up</a>
+			  </li>
+
+			</ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right-side actions -->
+        <div class="d-flex ms-auto align-items-center gap-3">
+          <a class="btn re-orderbtn" href="order-online.html">Order Now</a>
+
+          <a class="re-cart text-decoration-none" href="cart.html" aria-label="View cart">
+            <div class="re-cart-inner">
+              <div class="re-cart-icon" aria-hidden="true">
+                <img src="../assets/icons/basket-shopping-solid-full.svg" alt="Basket Icon" class="re-icon">
+              </div>
+              <div class="re-cart-count">(0)</div>
+              <div class="re-cart-label">Cart</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="re-order-main py-4">
+    <div class="container-xl">
+
+      <section class="row g-4 align-items-start">
+
+        <!-- LEFT: White ordering panel -->
+        <div class="col-12 col-lg-8">
+          <div class="re-order-panel">
+
+            <!-- Banner (matches mock: left-side bar) -->
+            <div class="re-order-banner">
+              <h1 class="re-order-banner-title">Order Online</h1>
+            </div>
+
+            <div class="re-order-body">
+
+              <!-- Location dropdown -->
+              <div class="re-order-center">
+                <select class="re-order-select" aria-label="Select location">
+                  <option>Rolls Express - Harrisburg</option>
+                  <option>Rolls Express - Downtown</option>
+                  <option>Rolls Express - West Shore</option>
+                </select>
+              </div>
+
+              <!-- Pickup / Delivery -->
+              <div class="re-order-center re-order-toggle">
+                <label class="re-radio">
+                  <input type="radio" name="fulfillment" value="Pickup" checked />
+                  <span>Pickup</span>
+                </label>
+
+                <label class="re-radio">
+                  <input type="radio" name="fulfillment" value="Delivery" />
+                  <span>Delivery</span>
+                </label>
+              </div>
+
+              <!-- Date + Time row -->
+              <div class="re-order-center re-order-datetime">
+                <div class="re-dt">
+                  <button class="re-dt-icon re-dt-trigger" type="button" aria-label="Open date picker" data-picker-target="order-date">📅</button>
+                  <input type="date" id="order-date" class="re-order-picker" aria-label="Pickup date" />
+                </div>
+
+                <div class="re-dt">
+                  <button class="re-dt-icon re-dt-trigger" type="button" aria-label="Open time picker" data-picker-target="order-time">🕒</button>
+                  <input type="time" id="order-time" class="re-order-picker" aria-label="Pickup time" step="900" />
+                </div>
+              </div>
+
+              <!-- Divider line -->
+              <div class="re-order-divider"></div>
+
+              <!-- Category links -->
+              <nav class="re-order-cats" aria-label="Menu categories">
+                <a href="#rolls">Rolls</a>
+                <a href="#bowls">Bowls &amp; Sides</a>
+                <a href="#sauces">Sauces, Drinks, Addo-Ons</a>
+              </nav>
+
+              <!-- ROLLS -->
+              <section id="rolls" class="re-order-section">
+                <h2>Rolls</h2>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Coastal Shrimp Fresh Rolls - $9.99</div>
+                    <div class="re-item-desc">
+                      Light and refreshing rice paper rolls filled with tender shrimp, vermicelli noodles, and crisp herbs. Served with a savory peanut dipping sauce for a perfect balance of fresh and rich.
+                    </div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">Golden Crunch Egg Rolls - $7.99</div>
+                    <div class="re-item-desc">
+                      Crispy, golden-fried rolls packed with seasoned vegetables and wrapped to perfection. Served hot with a sweet chili dipping sauce for that irresistible crunch.
+                    </div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">Dragon Fire Sushi Roll - $13.99</div>
+                    <div class="re-item-desc">
+                      A bold sushi roll layered with fresh fish and topped with a sweet and spicy glaze, finished with sesame seeds. Rich, flavorful, and slightly fiery with every bite.
+                    </div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">Garden Glow Veggie Rolls - $8.99</div>
+                    <div class="re-item-desc">
+                      Vibrant rice paper rolls packed with a colorful mix of fresh vegetables and herbs. Light, crisp, and served with a refreshing dipping sauce for a clean, healthy bite.
+                    </div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+              </section>
+
+              <!-- BOWLS -->
+              <section id="bowls" class="re-order-section">
+                <h2>Bowls</h2>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Zesty Shrimp Power Bowl - $12.99</div>
+                    <div class="re-item-desc">A vibrant bowl loaded with juicy shrimp, crisp vegetables, creamy avocado, and crunchy peanuts over a hearty base. Tossed in a light, zesty sauce for a fresh and satisfying bite.</div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Spicy Street Noodle Bowl - $13.99</div>
+                    <div class="re-item-desc">Rich, savory noodles served in a bold, spicy broth with tender beef and hearty vegetables. Packed with deep flavor and just the right kick to warm you up.</div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+              </section>
+
+              <!-- SAUCES -->
+              <section id="sauces" class="re-order-section">
+                <h2>Sauces, Drinks, Add-Ons</h2>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Sunset Splash Refresher - $4.99</div>
+                    <div class="re-item-desc">A trio of vibrant, fruit-forward iced refreshers bursting with sweet and tangy flavors. Light, colorful, and perfect for cooling down with every sip.</div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Umami Dip Sauce - $0.75</div>
+                    <div class="re-item-desc">A rich, savory dipping sauce with deep umami flavor and a hint of sweetness. Perfect for enhancing every bite of rolls and dumplings.</div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+
+                <article class="re-item">
+                  <div class="re-item-text">
+                    <div class="re-item-title">• Spicy Dragon Cream Sauce - $0.75</div>
+                    <div class="re-item-desc">A creamy, bold sauce swirled with chili heat and subtle sweetness. Smooth, spicy, and addictive—perfect for dipping or drizzling.</div>
+                  </div>
+                  <button class="re-add-btn" type="button">Add to Order</button>
+                </article>
+              </section>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Order summary card -->
+        <div class="col-12 col-lg-4">
+          <aside class="re-summary">
+
+            <h3 class="re-summary-title">Your Order</h3>
+
+            <div class="re-summary-items">
+
+              <div class="re-sum-row">
+                <div>
+                  <div class="re-sum-item">Item 1</div>
+                  <div class="re-sum-note">No Sauce. Extra spicy</div>
+                </div>
+                <div class="re-sum-right">
+                  <div class="re-sum-price">$12.00</div>
+                  <button class="re-trash" type="button" aria-label="Remove item">🗑️</button>
+                </div>
+              </div>
+
+              <div class="re-sum-row">
+                <div class="re-sum-item">Item 2</div>
+                <div class="re-sum-right">
+                  <div class="re-sum-price">$11.00</div>
+                  <button class="re-trash" type="button" aria-label="Remove item">🗑️</button>
+                </div>
+              </div>
+
+              <div class="re-sum-row">
+                <div class="re-sum-item">Item 3</div>
+                <div class="re-sum-right">
+                  <div class="re-sum-price">$4.00</div>
+                  <button class="re-trash" type="button" aria-label="Remove item">🗑️</button>
+                </div>
+              </div>
+
+              <div class="re-sum-row">
+                <div>
+                  <div class="re-sum-item">Item 4</div>
+                  <div class="re-sum-note">Sauce on the Side. Mild Spicy</div>
+                </div>
+                <div class="re-sum-right">
+                  <div class="re-sum-price">$15.00</div>
+                  <button class="re-trash" type="button" aria-label="Remove item">🗑️</button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="re-summary-totals">
+              <div class="re-total-row"><span>Sub-Total:</span><span>$42.00</span></div>
+              <div class="re-total-row"><span>Taxes/Fees:</span><span>$3.00</span></div>
+              <div class="re-total-row re-total-row--bold"><span>Total:</span><span>$45.00</span></div>
+            </div>
+
+            <div class="text-center mt-3">
+              <a class="btn re-summary-btn" href="cart.html">View Cart</a>
+            </div>
+
+          </aside>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+   <!-- Footer -->
+  <footer class="re-footer py-4 mt-3">
+    <div class="container-xl">
+      <div class="row g-3 align-items-end">
+
+        <div class="col-12 col-lg-4">
+          <div class="row g-3">
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="locations.html">Locations</a>
+              <a class="re-footerlink d-block mb-2" href="about.html">About Us</a>
+              <a class="re-footerlink d-block" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
+              <a class="re-footerlink d-block mb-2" href="careers.html">Careers</a>
+              <a class="re-footerlink d-block" href="catering.html">Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5 text-center">
+          <div class="re-copy mb-2">Copyright © 2026 Rolls Express</div>
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a class="re-legal" href="terms.html">Terms of Use</a>
+            <a class="re-legal" href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
+          <a class="re-social" href="#" aria-label="Facebook">
+            <img src="../assets/icons/facebook-brands-solid-full.svg" alt="Facebook Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="Instagram">
+            <img src="../assets/icons/instagram-brands-solid-full.svg" alt="Instagram Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="TikTok">
+            <img src="../assets/icons/tiktok-brands-solid-full.svg" alt="TikTok Icon" class="re-social-icon">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

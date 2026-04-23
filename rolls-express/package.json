@@ -1,0 +1,17 @@
+{
+  "name": "rolls-express-site",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Rolls Express web app with MongoDB backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed:mongo": "node backend/scripts/seedMongo.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "mongoose": "^8.23.0"
+  }
+}

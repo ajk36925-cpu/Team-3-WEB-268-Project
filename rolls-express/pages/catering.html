@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolls Express - Catering</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Shared site CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <!-- Catering-only CSS -->
+  <link rel="stylesheet" href="../css/catering.css" />
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+
+<body class="re-body">
+
+  <!-- Header -->
+  <header class="re-header py-3">
+    <div class="container-xl">
+      <div class="d-flex align-items-start gap-3 flex-wrap">
+
+        <!-- Logo -->
+        <a class="re-logo text-decoration-none" href="../index.html" aria-label="Rolls Express Home">
+          <div class="re-logo-box">
+            <img src="../assets/icons/logo.png" width="111" height="106" alt="Rolls Express Logo" />
+          </div>
+        </a>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg re-nav p-0">
+          <div class="container-fluid p-0">
+
+            <button class="navbar-toggler re-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav align-items-lg-center gap-lg-2 re-navlist">
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="../index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="menu.html">Menu</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink active" href="#"
+                    onclick="return false;" role="button" data-bs-toggle="dropdown">
+                    Order
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="order-online.html">Order Online</a></li>
+                    <li><a class="dropdown-item re-dditem" href="catering.html">Catering</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="loyalty.html">Loyalty Program</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="locations.html">Locations</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink" href="about.html"
+                    role="button" data-bs-toggle="dropdown">
+                    About Us
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item re-dditem" href="contact.html">Contact Us</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                  <a class="btn re-cta" href="login.html">Log In/Sign Up</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="catering-wrapper-outer">
+    <div class="container-xl">
+      <div class="catering-wrapper">
+
+        <!-- LEFT SIDE -->
+        <section class="catering-info">
+          <h2>Catering</h2>
+
+          <p class="intro">
+            We currently offer catering for groups of 15 or more.  
+            For more information or to schedule, please complete the Catering Inquiry Form.
+          </p>
+
+          <p class="desc">
+            Our catering menu brings the flavors of Rolls Express directly to your gathering.  
+            We focus on fresh ingredients, vibrant dishes, and reliable service.  
+            From small gatherings to large events, we tailor our offerings to meet your needs.
+          </p>
+
+          <h3>Requirements and Procedures:</h3>
+          <p>Select the requirement below</p>
+
+          <div class="requirements">
+            <button class="req-btn">One Requirement</button>
+            <button class="req-btn">Two Requirements</button>
+            <button class="req-btn">Three Requirements</button>
+            <button class="req-btn">Four and Five Requirements</button>
+            <button class="req-btn">Six Requirements</button>
+            <button class="req-btn">Seven Requirements</button>
+          </div>
+        </section>
+
+        <!-- RIGHT SIDE FORM -->
+        <section class="catering-form-section">
+          <h2>Catering Form</h2>
+
+          <form class="catering-form" method="post">
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+
+            <label>Phone Number:</label>
+            <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+            <label>Address:</label>
+            <input type="text" name="address" placeholder="Enter your address">
+
+            <label>Event Details:</label>
+            <textarea name="eventDetails" placeholder="Describe your event" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit Inquiry</button>
+          </form>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="re-footer py-4 mt-3">
+    <div class="container-xl">
+      <div class="row g-3 align-items-end">
+
+        <div class="col-12 col-lg-4">
+          <div class="row g-3">
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="locations.html">Locations</a>
+              <a class="re-footerlink d-block mb-2" href="about.html">About Us</a>
+              <a class="re-footerlink d-block" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-6">
+              <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
+              <a class="re-footerlink d-block mb-2" href="careers.html">Careers</a>
+              <a class="re-footerlink d-block" href="catering.html">Catering</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5 text-center">
+          <div class="re-copy mb-2">Copyright © 2026 Rolls Express</div>
+          <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a class="re-legal" href="terms.html">Terms of Use</a>
+            <a class="re-legal" href="privacy.html">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
+          <a class="re-social" href="#" aria-label="Facebook">
+            <img src="../assets/icons/facebook-brands-solid-full.svg" alt="Facebook Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="Instagram">
+            <img src="../assets/icons/instagram-brands-solid-full.svg" alt="Instagram Icon" class="re-social-icon">
+          </a>
+          <a class="re-social" href="#" aria-label="TikTok">
+            <img src="../assets/icons/tiktok-brands-solid-full.svg" alt="TikTok Icon" class="re-social-icon">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

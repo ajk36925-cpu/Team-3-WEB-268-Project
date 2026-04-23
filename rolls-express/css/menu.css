@@ -1,0 +1,109 @@
+/* Menu-only stylesheet
+   Depends on ../css/styles.css for variables + shared components (nav, footer, buttons, etc.)
+*/
+
+/* Tighten the white panel top spacing for the menu page */
+.re-panel{
+  padding-top: 1em !important;
+}
+
+/* MENU banner */
+.re-menu-banner{
+  background: rgba(61,12,86,1);
+  height: 84px;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+}
+
+.re-menu-banner-title{
+  margin: 0;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 26px;
+}
+
+/* Section headings */
+.re-menu-section{
+  color: var(--bg-purple);
+  font-weight: 600;
+  margin-bottom: 14px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Menu item blocks */
+.re-menu-item{
+  margin-bottom: 18px;
+}
+
+.re-menu-item p{
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0 0;
+}
+
+/* Figures */
+.re-menu-figure{
+  margin: 0;
+  text-align: center;
+}
+
+.re-menu-figure img{
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.re-menu-figure figcaption{
+  font-size: 12px;
+  color: #6b6b6b;
+  margin-top: 6px;
+}
+
+/* Rolls vertical stack */
+.re-menu-vertical-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.re-menu-vertical-stack .re-menu-figure{
+  width: 170px;
+}
+
+.re-menu-vertical-stack .re-menu-figure img{
+  height: 110px;
+}
+
+/* Horizontal image rows */
+.re-menu-img-row{
+  margin-top: 26px;
+  display: flex;
+  gap: 34px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.re-menu-img-row .re-menu-figure{
+  width: 160px;
+}
+
+.re-menu-img-row .re-menu-figure img{
+  height: 120px;
+}
+
+.re-menu-img-row--2{
+  gap: 40px;
+}
+
+.re-menu-img-row--3{
+  justify-content: center;
+}
+
+.re-orderbox{
+  min-height: 360px;
+}

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rolls Express - Home</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body class="re-body">
+
+  <!-- Header -->
+  <header class="re-header py-3">
+    <div class="container-xl">
+      <div class="d-flex align-items-start gap-3 flex-wrap">
+		  
+		  
+
+        <!-- Logo LEFT -->
+        <a class="re-logo text-decoration-none" href="index.html" aria-label="Rolls Express Home">
+          <div class="re-logo-box">
+          <img src="assets/icons/logo.png" width="111" height="106" alt=""/> </div>
+        </a>
+		  
+
+        <!-- Navbar MIDDLE -->
+        <nav class="navbar navbar-expand-lg re-nav p-0">
+          <div class="container-fluid p-0">
+
+            <!-- Mobile toggle for Nav Bar -->
+            <button class="navbar-toggler re-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav align-items-lg-center gap-lg-2 re-navlist">
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink active" href="index.html">Home</a>
+                </li>
+
+                <!-- MENU  -->
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="pages/menu.html">Menu</a>
+                </li>
+
+                <!-- ORDER (Has a dropdown with Order Online and Catering) -->
+                <li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle re-navlink" href="#"
+					 onclick="return false;"
+					 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Order
+				  </a>
+				  <ul class="dropdown-menu re-dropdown">
+					<li><a class="dropdown-item re-dditem" href="pages/order-online.html">Order Online</a></li>
+					<li><a class="dropdown-item re-dditem" href="pages/catering.html">Catering</a></li>
+				  </ul>
+				</li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="pages/loyalty.html">Loyalty Program</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link re-navlink" href="pages/locations.html">Locations</a>
+                </li>
+
+                <!-- ABOUT US (Had a dropdown with Contact Us) -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle re-navlink" href="pages/about.html"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About Us
+                  </a>
+                  <ul class="dropdown-menu re-dropdown">
+                    <li><a class="dropdown-item re-dditem" href="pages/about.html">About Us</a></li>
+                    <li><a class="dropdown-item re-dditem" href="pages/contact.html">Contact Us</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                  <a class="btn re-cta" href="pages/login.html">Log In/Sign Up</a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+		  
+		  
+		  <!--Icons RIGHT -->
+		  <div class="d-flex ms-auto align-items-center gap-3">
+              <a class="btn re-orderbtn" href="pages/order-online.html">Order Now</a>
+
+              <a class="re-cart text-decoration-none" href="pages/cart.html" aria-label="View cart">
+                <div class="re-cart-inner">
+                  <div class="re-cart-icon" aria-hidden="true"><img src="assets\icons\basket-shopping-solid-full.svg" alt="Basket Icon" class="re-icon"></div>
+                  <div class="re-cart-count">(0)</div>
+                  <div class="re-cart-label">Cart</div>
+                </div>
+              </a>
+            </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main white panel -->
+  <main class="re-panel py-3">
+    <div class="container-xl">
+
+      <!-- Hero row -->
+      <section class="row g-3 align-items-start">
+        <div class="col-12 col-lg-7">
+          <img
+            class="img-fluid w-100 re-right-hero-img"
+            src="assets/images/HomePageLarge.jpg"
+            alt="Food photo placeholder"
+          />
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div class="re-orderbox re-orderbox--video">
+            <video class="re-orderbox-video" autoplay muted loop playsinline preload="auto" aria-label="Decorative looping restaurant video">
+              <source src="assets/video/246385.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Menu Items -->
+	  <div class ="main-section">
+      <section class="mt-4 mt-lg-5">
+        <h2 class="re-section-title text-center mb-4">New Menu Items</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="re-card h-100">
+              <img class="img-fluid w-100 img-padding"
+                src="assets\images\Rolls1.jpg"
+                alt="Menu item placeholder"
+              />
+              <div class="re-card-body text-center p-3 p-lg-4">
+                <h3 class="re-card-title mb-2">Coastal Shrimp Fresh Rolls</h3>
+                <p class="re-card-text mb-0">Light and refreshing rice paper rolls filled with tender shrimp, vermicelli noodles, and crisp herbs. Served with a savory peanut dipping sauce for a perfect balance of fresh and rich.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="re-card h-100">
+              <img class="img-fluid w-100 img-padding"
+                src="assets\images\Rolls2.jpg"
+                alt="Menu item placeholder"
+              />
+              <div class="re-card-body text-center p-3 p-lg-4">
+                <h3 class="re-card-title mb-2">Golden Crunch Egg Rolls</h3>
+                <p class="re-card-text mb-0">Crispy, golden-fried rolls packed with seasoned vegetables and wrapped to perfection. Served hot with a sweet chili dipping sauce for that irresistible crunch.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="re-card h-100">
+              <img class="img-fluid w-100 img-padding"
+                src="assets\images\Rolls3.jpg"
+                alt="Menu item placeholder"
+              />
+              <div class="re-card-body text-center p-3 p-lg-4">
+                <h3 class="re-card-title mb-2">Dragon Fire Sushi Roll</h3>
+                <p class="re-card-text mb-0">A bold sushi roll layered with fresh fish and topped with a sweet and spicy glaze, finished with sesame seeds. Rich, flavorful, and slightly fiery with every bite.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <article class="re-card h-100">
+              <img class="img-fluid w-100 img-padding"
+                src="assets\images\Rolls4.jpg"
+                alt="Menu item placeholder"
+              />
+              <div class="re-card-body text-center p-3 p-lg-4">
+                <h3 class="re-card-title mb-2">Garden Glow Veggie Rolls</h3>
+                <p class="re-card-text mb-0">Vibrant rice paper rolls packed with a colorful mix of fresh vegetables and herbs. Light, crisp, and served with a refreshing dipping sauce for a clean, healthy bite.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      </div>
+
+    </div>
+  </main>
+
+ <footer class="re-footer py-4 mt-3">
+  <div class="container-xl">
+    <div class="row g-3 align-items-end">
+
+      <div class="col-12 col-lg-4">
+        <div class="row g-3">
+          <div class="col-6">
+            <a class="re-footerlink d-block mb-2" href="pages/locations.html">Locations</a>
+            <a class="re-footerlink d-block mb-2" href="pages/about.html">About Us</a>
+            <a class="re-footerlink d-block re-footerlink-active" href="pages/contact.html">Contact Us</a>
+          </div>
+          <div class="col-6">
+            <a class="re-footerlink d-block mb-2" href="pages/loyalty.html">Loyalty Program</a>
+            <a class="re-footerlink d-block mb-2" href="pages/careers.html">Careers</a>
+            <a class="re-footerlink d-block" href="pages/catering.html">Catering</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5 text-center">
+        <div class="re-copy mb-2">Copyright © 2026 Rolls Express</div>
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+          <a class="re-legal" href="pages/terms.html">Terms of Use</a>
+          <a class="re-legal" href="pages/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+
+      <!-- CLEAN SOCIAL ICONS (only one set) -->
+      <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
+
+        <a class="re-social" 
+           href="https://www.facebook.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/facebook-brands-solid-full.svg" class="re-social-icon" alt="Facebook">
+        </a>
+
+        <a class="re-social" 
+           href="https://www.instagram.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/instagram-brands-solid-full.svg" class="re-social-icon" alt="Instagram">
+        </a>
+
+        <a class="re-social" 
+           href="https://www.tiktok.com" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <img src="../assets/icons/tiktok-brands-solid-full.svg" class="re-social-icon" alt="TikTok">
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS Bundle (Dropdowns / Navbar toggler) -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

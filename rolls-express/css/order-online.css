@@ -1,0 +1,269 @@
+/* Order Online page only (uses ../css/styles.css for tokens + header/footer/buttons) */
+
+/* Align content with navbar */
+@media (min-width: 992px){
+  .re-order-main{
+    margin-left: calc(var(--logo-w) + var(--logo-gap));
+  }
+}
+
+/* White panel */
+.re-order-panel{
+  background: var(--white);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.10);
+}
+
+/* Banner */
+.re-order-banner{
+  background: rgba(61,12,86,1);
+  height: 90px;
+  display: grid;
+  place-items: center;
+  width: 60%;            /* matches mock: not full width */
+}
+
+.re-order-banner-title{
+  margin: 0;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+/* Body spacing */
+.re-order-body{
+  padding: 16px 28px 34px;
+}
+
+/* Centered controls */
+.re-order-center{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.re-order-select{
+  height: 18px;
+  font-size: 11px;
+  border: 1px solid #888;
+  background: var(--white);
+}
+
+/* Pickup / Delivery */
+.re-order-toggle{
+  gap: 90px;
+  margin-top: 14px;
+  font-size: 12px;
+  color: #222;
+}
+
+.re-radio{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Date/time row */
+.re-order-datetime{
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.re-dt{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.re-dt input{
+  width: 180px;
+  height: 18px;
+  border: 1px solid #666;
+  font-size: 11px;
+  padding: 0 6px;
+}
+
+.re-dt-icon{
+  font-size: 14px;
+}
+
+/* Divider */
+.re-order-divider{
+  height: 1px;
+  background: rgba(120,70,140,0.55);
+  width: 78%;
+  margin: 26px auto 0;
+}
+
+/* Category links */
+.re-order-cats{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-top: 14px;
+  padding-top: 6px;
+}
+
+.re-order-cats a{
+  font-size: 11px;
+  color: #6b2c83;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Sections */
+.re-order-section{
+  margin-top: 34px;
+}
+
+.re-order-section h2{
+  font-size: 16px;
+  color: #6b2c83;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+/* Items */
+.re-item{
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 12px;
+  align-items: start;
+  margin: 0 0 22px;
+}
+
+.re-item-title{
+  font-size: 12px;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.re-item-desc{
+  font-size: 9px;
+  color: #444;
+  line-height: 1.35;
+  max-width: 520px;
+}
+
+/* Add to order button */
+.re-add-btn{
+  justify-self: end;
+  margin-top: 8px;
+  background: rgba(122,74,146,0.95);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 9px;
+  padding: 6px 10px;
+}
+
+.re-add-btn:hover{
+  filter: brightness(1.05);
+}
+
+/* Summary card (right) */
+.re-summary{
+  background: var(--white);
+  border: 2px solid rgba(120,70,140,0.7);
+  border-radius: 4px;
+  padding: 18px 18px 16px;
+  margin-top: 150px; /* matches mock vertical placement */
+}
+
+.re-summary-title{
+  text-align: center;
+  font-size: 14px;
+  color: #6b2c83;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  margin-bottom: 14px;
+}
+
+.re-summary-items{
+  display: grid;
+  gap: 14px;
+}
+
+.re-sum-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+}
+
+.re-sum-item{
+  font-size: 12px;
+  color: #333;
+}
+
+.re-sum-note{
+  font-size: 9px;
+  color: #777;
+  margin-top: 3px;
+}
+
+.re-sum-right{
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.re-sum-price{
+  font-size: 12px;
+  color: #6b2c83;
+}
+
+.re-trash{
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Totals */
+.re-summary-totals{
+  margin-top: 18px;
+  font-size: 10px;
+  color: #6b2c83;
+  text-align: right;
+}
+
+.re-total-row{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.re-total-row--bold{
+  font-weight: 700;
+}
+
+/* View Cart button */
+.re-summary-btn{
+  background: rgba(61,12,86,1);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 11px;
+}
+
+.re-summary-btn:hover{
+  filter: brightness(1.06);
+  color: var(--white);
+}
+
+/* Mobile tweaks */
+@media (max-width: 991.98px){
+  .re-order-banner{
+    width: 100%;
+  }
+  .re-summary{
+    margin-top: 0;
+  }
+}
