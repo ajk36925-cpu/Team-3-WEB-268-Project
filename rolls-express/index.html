@@ -122,8 +122,8 @@
     <div class="container-xl">
 
       <!-- Hero row -->
-      <section class="row g-3 align-items-start">
-        <div class="col-12 col-lg-7">
+      <section class="row g-3 align-items-start hero-wrapper">
+        <div class="col-12 col-lg-7 hero-media">
           <img
             class="img-fluid w-100 re-right-hero-img"
             src="assets/images/HomePageLarge.jpg"
@@ -132,10 +132,34 @@
         </div>
 
         <div class="col-12 col-lg-5">
-          <div class="re-orderbox re-orderbox--video">
+          <div class="re-orderbox re-orderbox--video hero-secondary hero-media">
             <video class="re-orderbox-video" autoplay muted loop playsinline preload="auto" aria-label="Decorative looping restaurant video">
               <source src="assets/video/246385.mp4" type="video/mp4" />
             </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class="re-welcome-section" aria-labelledby="welcomeTitle">
+        <div class="re-welcome-card">
+          <div class="re-welcome-logo-wrap">
+            <img
+              class="re-welcome-logo"
+              src="assets/icons/logo_side_image.png"
+              alt="Rolls Express side logo"
+            />
+          </div>
+
+          <div class="re-welcome-content">
+            <p class="re-welcome-eyebrow">Fresh rolls. Bold flavors. Fast service.</p>
+            <h1 id="welcomeTitle" class="re-welcome-title">Rolls Express</h1>
+            <p class="re-welcome-text">
+              Welcome to Rolls Express, your quick stop for fresh spring rolls, crispy bites, sushi-inspired favorites,
+              and flavorful meals made for busy days. Whether you are ordering lunch, planning dinner, or checking out
+              our newest menu items, we make it easy to find something fresh, colorful, and satisfying.
+            </p>
+            <a class="btn re-welcome-btn" href="pages/order-online.html">Start Your Order</a>
           </div>
         </div>
       </section>

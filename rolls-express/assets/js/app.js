@@ -447,8 +447,13 @@
       itemsContainer.innerHTML = state.cart.items.map((item) => `
         <div class="re-sum-row">
           <div>
-            <div class="re-sum-item">${escapeHtml(item.name)} × ${item.quantity}</div>
+            <div class="re-sum-item">${escapeHtml(item.name)}</div>
             <div class="re-sum-note">${escapeHtml(item.description)}</div>
+            <div class="re-sum-qty-controls" aria-label="Update quantity for ${escapeHtml(item.name)}">
+              <button class="re-qty-btn" type="button" aria-label="Decrease quantity" data-decrease-item="${escapeHtml(item.id)}">−</button>
+              <input class="re-sum-qty-input" type="number" min="1" value="${item.quantity}" data-qty-item="${escapeHtml(item.id)}" aria-label="Quantity for ${escapeHtml(item.name)}" />
+              <button class="re-qty-btn" type="button" aria-label="Increase quantity" data-increase-item="${escapeHtml(item.id)}">+</button>
+            </div>
           </div>
           <div class="re-sum-right">
             <div class="re-sum-price">${currency(item.price * item.quantity)}</div>
@@ -456,6 +461,24 @@
           </div>
         </div>
       `).join('');
+
+      itemsContainer.querySelectorAll('[data-decrease-item]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = state.cart.items.find((entry) => entry.id === button.dataset.decreaseItem);
+          if (item) setCartQuantity(item.id, item.quantity - 1);
+        });
+      });
+
+      itemsContainer.querySelectorAll('[data-increase-item]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const item = state.cart.items.find((entry) => entry.id === button.dataset.increaseItem);
+          if (item) setCartQuantity(item.id, item.quantity + 1);
+        });
+      });
+
+      itemsContainer.querySelectorAll('[data-qty-item]').forEach((input) => {
+        input.addEventListener('change', () => setCartQuantity(input.dataset.qtyItem, input.value));
+      });
 
       itemsContainer.querySelectorAll('[data-remove-item]').forEach((button) => {
         button.addEventListener('click', () => removeFromCart(button.dataset.removeItem));
