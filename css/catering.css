@@ -71,3 +71,37 @@
 .req-btn:hover {
     opacity: 0.85;
 }
+
+/* MOBILE STACKING */
+@media (max-width: 767.98px) {
+    .catering-wrapper-outer {
+        overflow-x: hidden;
+    }
+
+    .catering-wrapper {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem;
+    }
+
+    .catering-info,
+    .catering-form-section {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .catering-info {
+        order: 1;
+    }
+
+    .catering-form-section {
+        order: 2;
+    }
+
+    .catering-form input,
+    .catering-form textarea,
+    .req-btn,
+    .submit-btn {
+        font-size: 1rem;
+    }
+}
