@@ -1,4 +1,4 @@
-## Install and run locally
+## Install and run
 
 1. Open a terminal in the `rolls-express` folder
 2. Run:
