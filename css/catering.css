@@ -71,3 +71,48 @@
 .req-btn:hover {
     opacity: 0.85;
 }
+
+/* MOBILE LAYOUT
+   Stacks the Catering content first and moves the form underneath so the
+   page reads as one clear column on phones/tablets. */
+@media (max-width: 500px) {
+    .catering-wrapper-outer {
+        padding: 0 0.75rem;
+    }
+
+    .catering-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.75rem;
+    }
+
+    .catering-info,
+    .catering-form-section {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .catering-info {
+        order: 1;
+    }
+
+    .catering-form-section {
+        order: 2;
+    }
+
+    .catering-info h2,
+    .catering-form-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .requirements {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    .req-btn {
+        margin-bottom: 0;
+        white-space: normal;
+    }
+}

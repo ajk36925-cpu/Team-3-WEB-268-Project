@@ -137,7 +137,7 @@
 
 /* RESPONSIVE */
 
-@media (max-width: 767.98px) {
+@media (max-width: 500px) {
   .re-careers-hero {
     flex-direction: column;
     min-height: auto;
@@ -151,5 +151,62 @@
 
   .re-careers-logo {
     width: min(300px, 82%);
+  }
+}
+/* MOBILE LAYOUT
+   Turns the Careers content into one readable column instead of squeezing
+   job cards side-by-side on small screens. */
+@media (max-width: 500px) {
+  .re-careers-main {
+    padding-top: 0.75rem;
+  }
+
+  .re-careers-wrap {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .re-careers-panel-wrap {
+    max-width: 100%;
+    padding: 0.75rem;
+  }
+
+  .re-careers-panel-bg {
+    border-radius: 12px;
+  }
+
+  .re-careers-panel {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .re-careers-hero {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .re-careers-title {
+    margin-left: 0;
+    margin-top: -0.5rem;
+  }
+
+  .re-careers-grid {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .re-job-card {
+    min-height: auto;
+    padding: 1.1rem;
+  }
+
+  .re-job-card h2 {
+    font-size: 1.05rem;
+  }
+
+  .re-job-card p {
+    font-size: 0.9rem;
+    line-height: 1.55;
   }
 }
