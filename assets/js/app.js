@@ -131,6 +131,19 @@
     });
   }
 
+  function getCartQuantity(itemId) {
+    const item = state.cart.items.find((entry) => entry.id === itemId);
+    return item ? item.quantity : 0;
+  }
+
+  function updateMenuItemQuantities() {
+    document.querySelectorAll('[data-item-quantity]').forEach((badge) => {
+      const quantity = getCartQuantity(badge.dataset.itemQuantity);
+      badge.textContent = quantity ? `Qty: ${quantity}` : '';
+      badge.classList.toggle('d-none', quantity === 0);
+    });
+  }
+
   function updateAuthUi() {
     document.querySelectorAll('.re-cta').forEach((button) => {
       let logoutButton = null;
@@ -193,6 +206,7 @@
     saveCart();
     renderOrderSummary();
     renderCartPage();
+    updateMenuItemQuantities();
   }
 
   function removeFromCart(itemId) {
@@ -200,6 +214,7 @@
     saveCart();
     renderOrderSummary();
     renderCartPage();
+    updateMenuItemQuantities();
   }
 
   function setCartQuantity(itemId, quantity) {
@@ -209,6 +224,7 @@
     saveCart();
     renderOrderSummary();
     renderCartPage();
+    updateMenuItemQuantities();
   }
 
   async function loadMenu() {
@@ -423,7 +439,10 @@
             <div class="re-item-title">${escapeHtml(item.name)} - ${currency(item.price)}</div>
             <div class="re-item-desc">${escapeHtml(item.description)}</div>
           </div>
-          <button class="re-add-btn" type="button" data-add-item="${escapeHtml(item.id)}">Add to Order</button>
+          <div class="re-item-action">
+            <button class="re-add-btn" type="button" data-add-item="${escapeHtml(item.id)}">Add to Order</button>
+            <span class="re-item-qty-badge d-none" data-item-quantity="${escapeHtml(item.id)}" aria-live="polite"></span>
+          </div>
         </article>
       `).join('');
     });
@@ -434,6 +453,8 @@
         if (menuItem) addToCart(menuItem);
       });
     });
+
+    updateMenuItemQuantities();
   }
 
   function renderOrderSummary() {

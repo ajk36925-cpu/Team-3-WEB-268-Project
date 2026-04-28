@@ -289,7 +289,8 @@
 
 .re-summary-btn:hover{
   filter: brightness(1.06);
-  color: var(--white);
+  background: #6b2c83;
+  color: var(--white)
 }
 
 /* Mobile tweaks */
@@ -299,5 +300,40 @@
   }
   .re-summary{
     margin-top: 0;
+  }
+}
+/* Quantity shown beside each Add to Order button */
+.re-item-action{
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.re-item-action .re-add-btn{
+  margin-top: 0;
+}
+
+.re-item-qty-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(122,74,146,0.12);
+  color: #6b2c83;
+  border: 1px solid rgba(122,74,146,0.35);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 575.98px){
+  .re-item-action{
+    justify-self: start;
   }
 }

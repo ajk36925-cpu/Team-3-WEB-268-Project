@@ -221,6 +221,15 @@
   border-radius: 6px;
 }
 
+.loyalty-note {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: rgba(152, 71, 113, 0.1);
+  border-left: 4px solid #984771;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
 @media (max-width: 991.98px) {
   .loyalty-title {
     max-width: 100%;

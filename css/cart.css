@@ -225,6 +225,7 @@
 .re-cart-edit-btn:hover,
 .re-cart-remove-btn:hover,
 .re-cart-submit-btn:hover {
+  background: #7b4a92;
   color: #ffffff;
   filter: brightness(1.05);
 }
