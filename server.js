@@ -245,6 +245,28 @@ app.post('/api/catering', async (req, res) => {
   res.status(201).json({ message: 'Your catering inquiry has been submitted.' });
 });
 
+const faviconIcoFile = path.join(ROOT, 'favicon.ico');
+const faviconPngFile = path.join(ROOT, 'assets', 'icons', 'favicon.png');
+const appleTouchIconFile = path.join(ROOT, 'apple-touch-icon.png');
+
+app.get('/favicon.ico', (req, res) => {
+  res.type('image/x-icon');
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.sendFile(faviconIcoFile);
+});
+
+app.get('/favicon.png', (req, res) => {
+  res.type('png');
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.sendFile(faviconPngFile);
+});
+
+app.get('/apple-touch-icon.png', (req, res) => {
+  res.type('png');
+  res.set('Cache-Control', 'public, max-age=86400');
+  res.sendFile(appleTouchIconFile);
+});
+
 app.use(express.static(ROOT));
 
 app.get('*', (req, res) => {

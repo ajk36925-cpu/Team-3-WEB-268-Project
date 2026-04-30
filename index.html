@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rolls Express - Home</title>
-
+  <link rel="icon" type="image/x-icon" href="./favicon.ico?v=3" />
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png?v=3" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png?v=3" />
   <!-- Bootstrap CSS (CDN) -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -23,7 +26,8 @@
   <header class="re-header py-3">
     <div class="container-xl">
       <div class="d-flex align-items-start gap-3 flex-wrap">
-		  
+	
+	  
 		  
 
         <!-- Logo LEFT -->
@@ -131,15 +135,38 @@
           />
         </div>
 
-        <div class="col-12 col-lg-5">
-          <div class="re-orderbox re-orderbox--video hero-secondary hero-media">
-            <video class="re-orderbox-video" autoplay muted loop playsinline preload="auto" aria-label="Decorative looping restaurant video">
-              <source src="assets/video/246385.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
+       <div class="col-12 col-lg-5">
+  <div class="re-orderbox re-orderbox--video hero-secondary hero-media position-relative">
 
+    <video id="rollsVideo" class="re-orderbox-video" autoplay loop muted playsinline preload="auto">
+      <source src="assets/video/rollsexpressvid.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Sound Toggle Button -->
+    <button id="soundToggle" class="sound-btn" aria-label="Toggle sound">
+      🔇
+    </button>
+
+  </div>
+		   <script>
+  const video = document.getElementById("rollsVideo");
+  const btn = document.getElementById("soundToggle");
+
+  // Allow sound after ANY user click on the page
+  document.addEventListener("click", function enableSound() {
+    video.muted = false;
+    btn.textContent = "🔊";
+    document.removeEventListener("click", enableSound);
+  });
+
+  // Manual toggle button
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation(); // prevents the page click handler from firing
+    video.muted = !video.muted;
+    btn.textContent = video.muted ? "🔇" : "🔊";
+  });
+</script>
+</div>
       <!-- Welcome Section -->
       <section class="re-welcome-section" aria-labelledby="welcomeTitle">
         <div class="re-welcome-card">
