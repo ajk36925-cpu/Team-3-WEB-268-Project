@@ -1,5 +1,26 @@
 # Rolls Express — Team 3 WEB-268 Project
 
+## Contributors
+
+- Bernadette Moreno
+- Maria Crum
+- Amanda Konzelmann
+
+---
+
+## Server
+
+This project runs on a **Node.js + Express** server (`server.js`) with a **MongoDB** database via Mongoose.
+
+| Component  | Technology              |
+|------------|-------------------------|
+| Runtime    | Node.js                 |
+| Server     | Express.js              |
+| Database   | MongoDB (Mongoose v8)   |
+| Port       | `3000` (default)        |
+
+---
+
 ## Project Structure
 
 ```
