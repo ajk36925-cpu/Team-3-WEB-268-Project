@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
   <title>Rolls Express - Log In / Sign Up</title>
 
   <!-- Bootstrap CSS (CDN) -->
@@ -150,33 +151,33 @@
               <div class="row g-3">
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-name">Name:</label>
-                  <input class="form-control re-auth-input" id="su-name" name="name" type="text" required />
+                  <label class="re-auth-label" for="su-name">Name: *</label>
+                  <input class="form-control re-auth-input" id="su-name" name="name" type="text"  placeholder="Enter your name" required />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-email">Email:</label>
-                  <input class="form-control re-auth-input" id="su-email" name="email" type="email" required />
+                  <label class="re-auth-label" for="su-email">Email: *</label>
+                  <input class="form-control re-auth-input" id="su-email" name="email" type="email"  placeholder="Enter your email" required />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-password">Password:</label>
-                  <input class="form-control re-auth-input" id="su-password" name="password" type="password" required />
+                  <label class="re-auth-label" for="su-password">Password: *</label>
+                  <input class="form-control re-auth-input" id="su-password" name="password" type="password"  placeholder="Create a password (at least six characters)" required />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-phone">Phone Number:</label>
-                  <input class="form-control re-auth-input" id="su-phone" name="phone" type="tel" required />
+                  <label class="re-auth-label" for="su-phone">Phone Number: *</label>
+                  <input class="form-control re-auth-input" id="su-phone" name="phone" type="tel"  placeholder="Enter your phone number" required />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-address">Address:</label>
-                  <input class="form-control re-auth-input" id="su-address" name="address" type="text" required />
+                  <label class="re-auth-label" for="su-address">Address: *</label>
+                  <input class="form-control re-auth-input" id="su-address" name="address" type="text"  placeholder="Enter your address" required />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="su-zip">Zip Code:</label>
-                  <input class="form-control re-auth-input" id="su-zip" name="zip" type="text" required />
+                  <label class="re-auth-label" for="su-zip">Zip Code: *</label>
+                  <input class="form-control re-auth-input" id="su-zip" name="zip" type="text"  placeholder="Enter your zip code" required />
                 </div>
 
                 <div id="verify-panel" class="col-12 d-none">
@@ -206,13 +207,13 @@
               <div class="row g-3">
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="li-email">Email:</label>
-                  <input class="form-control re-auth-input" id="li-email" name="loginEmail" type="email" />
+                  <label class="re-auth-label" for="li-email">Email: *</label>
+                  <input class="form-control re-auth-input" id="li-email" name="loginEmail" type="email" placeholder="Enter your email" />
                 </div>
 
                 <div class="col-12">
-                  <label class="re-auth-label" for="li-password">Password:</label>
-                  <input class="form-control re-auth-input" id="li-password" name="password" type="password" />
+                  <label class="re-auth-label" for="li-password">Password: *</label>
+                  <input class="form-control re-auth-input" id="li-password" name="password" type="password"  placeholder="Enter your password" />
                 </div>
 
                 <div class="col-12 d-flex justify-content-center pt-2">
@@ -237,7 +238,7 @@
           <div class="col-6">
             <a class="re-footerlink d-block mb-2" href="locations.html">Locations</a>
             <a class="re-footerlink d-block mb-2" href="about.html">About Us</a>
-            <a class="re-footerlink d-block re-footerlink-active" href="contact.html">Contact Us</a>
+            <a class="re-footerlink d-block" href="contact.html">Contact Us</a>
           </div>
           <div class="col-6">
             <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
@@ -253,6 +254,9 @@
           <a class="re-legal" href="terms.html">Terms of Use</a>
           <a class="re-legal" href="privacy.html">Privacy Policy</a>
         </div>
+		  <div class="mt-2">
+		<img src="../assets/images/BAM_Logo.png" alt="BAM Logo" style="max-width: 80px;">
+	  </div>
       </div>
 
       <!-- CLEAN SOCIAL ICONS (only one set) -->

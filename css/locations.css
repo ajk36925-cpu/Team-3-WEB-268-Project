@@ -256,3 +256,123 @@
   }
 
 }
+/* STRICT MOBILE FIX: Locations page under 500px */
+@media (max-width: 750px) {
+  .re-locations-main {
+    padding-top: 1rem;
+  }
+
+  .re-locations-wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .re-locations-layout {
+    display: block;
+  }
+
+  .re-side-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .re-side-img {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .re-locations-panel-wrap {
+    padding: 0;
+  }
+
+  .re-locations-panel-bg {
+    display: none;
+  }
+
+  .re-locations-panel {
+    min-height: auto;
+    padding: 2rem 1rem;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .re-locations-title {
+    position: relative;
+    z-index: 2;
+    font-size: 2.4rem;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+
+  .re-logo-feature {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .re-logo-feature > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    opacity: 0.22;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .re-location-columns {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    z-index: 1;
+    width: 100%;
+    max-width: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .re-location-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 3px solid rgba(91, 220, 255, 0.75);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .re-location-number {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .re-location-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .re-location-item p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin-bottom: 0;
+  }
+
+  .re-map-wrap {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .re-map-wrap img {
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    opacity: 0.35;
+  }
+}

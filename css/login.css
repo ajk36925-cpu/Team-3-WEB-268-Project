@@ -49,9 +49,12 @@
 }
 
 .re-auth-input{
-  border-radius: 0;
-  border: 2px solid #1b1b1b;
   box-shadow: none !important;
+	width: 100%;
+  background: #fff;
+  color: #222;
+    border-radius: 6px;
+    border: none;
 }
 
 /* Buttons  */
@@ -65,8 +68,9 @@
 }
 
 .re-auth-btn:hover{
-  filter: brightness(1.06);
-  color: var(--white);
+  filter: brightness(1.05);
+	color: white;
+	background: #7a4a88;
 }
 
 /* Divider */

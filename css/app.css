@@ -186,3 +186,89 @@
 .re-logout-btn:disabled {
   opacity: .75;
 }
+
+/* Smaller loyalty welcome popup */
+.re-modal-overlay--compact {
+  background: rgba(30, 18, 38, .34);
+  backdrop-filter: blur(7px);
+}
+
+.re-modal-overlay--compact .re-modal-card {
+  width: min(520px, 92vw);
+  min-height: auto;
+  background: #fffaf7;
+  border: 2px solid #b78bd7;
+  border-radius: 24px;
+}
+
+.re-modal-overlay--compact .re-modal-band,
+.re-modal-overlay--compact .re-modal-footerband {
+  height: 18px;
+  background: linear-gradient(90deg, #5e1f78, #c8a2eb, #f1a208);
+}
+
+.re-modal-overlay--compact .re-modal-footerband {
+  position: static;
+}
+
+.re-modal-overlay--compact .re-modal-close {
+  top: 16px;
+  right: 18px;
+  color: #5e1f78;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.re-modal-overlay--compact .re-modal-inner {
+  min-height: auto;
+  padding: 2.2rem 1.6rem 1.7rem;
+}
+
+.re-modal-overlay--compact .re-modal-message {
+  background: transparent;
+  border: 0;
+  margin-top: 0;
+  padding: 0 1.25rem;
+}
+
+.re-modal-overlay--compact .re-modal-title {
+  color: #5e1f78;
+  font-size: clamp(2rem, 6vw, 2.7rem);
+  margin-bottom: .75rem;
+}
+
+.re-modal-overlay--compact .re-modal-text {
+  color: #3f2b4f;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.re-modal-overlay--compact .re-modal-actions {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  margin-top: 1.5rem;
+}
+
+.re-modal-overlay--compact .re-modal-action h3:empty {
+  display: none;
+}
+
+.re-modal-overlay--compact .re-modal-btn {
+  width: 100%;
+  border-radius: 999px;
+  background: #5e1f78;
+  color: #fff;
+  font-weight: 700;
+  padding: .8rem 1rem;
+}
+
+.re-modal-overlay--compact .re-modal-btn:hover {
+  background: #7a3c9f;
+}
+
+@media (max-width: 500px) {
+  .re-modal-overlay--compact .re-modal-actions {
+    grid-template-columns: 1fr;
+  }
+}

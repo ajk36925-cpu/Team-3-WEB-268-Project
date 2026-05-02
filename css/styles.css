@@ -69,7 +69,8 @@
 
 .re-cta:hover{
   filter: brightness(1.05);
-  color: var(--white);
+  color:rgba(61,12,86);
+	background: rgba(95, 30, 120, 0.10);
 }
 
 .re-cta-active{
@@ -186,8 +187,9 @@
 }
 
 .re-orderbtn:hover{
-  filter: brightness(1.05);
-  color: var(--white);
+   filter: brightness(1.05);
+	color: white;
+	background: #7a4a88;
 }
 
 /* Cart circle */
@@ -200,6 +202,10 @@
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+.re-cart:hover{
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
 }
 
 .re-cart-inner{
@@ -379,6 +385,12 @@
   display: inline-block !important;
 }
 
+#menu-items,
+#testimonials {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /* Footer */
 .re-footer{
   background: var(--bg-purple);
@@ -416,6 +428,10 @@
   fill: currentColor;
 }
 
+.re-social-icon:hover{
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
 .re-social{
   width: 44px;
   height: 44px;
@@ -424,5 +440,83 @@
   display: grid;
   place-items: center;
   text-decoration: none;
+  font-weight: 800;
+}
+
+.logged-in-btn,
+.logged-in-btn:hover{
+  background: rgba(61,12,86);
+  color: var(--white);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+
+.re-cta--header{
+  background: rgba(61,12,86);
+  color: var(--white);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.re-cta--header:hover{
+  filter: brightness(1.05);
+  color:rgba(61,12,86);
+	background: rgba(95, 30, 120, 0.10);
+}
+
+
+
+/* Testimonials Section */
+.re-testimonials-section {
+  padding: 1rem 0 2rem;
+}
+
+.re-testimonials-eyebrow {
+  color: #5e1f78;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.re-testimonial-card {
+  background: #fff;
+  border: 2px solid #e4d2f0;
+  border-radius: 22px;
+  box-shadow: 0 12px 24px rgba(94, 31, 120, .14);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.re-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 32px rgba(94, 31, 120, .2);
+}
+
+.re-stars {
+  color: #f1a208;
+  font-size: 1.45rem;
+  letter-spacing: .1rem;
+  margin-bottom: .9rem;
+}
+
+.re-star-muted {
+  color: #d8c9df;
+}
+
+.re-testimonial-text {
+  color: #3f2b4f;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.re-testimonial-name {
+  color: #5e1f78;
   font-weight: 800;
 }

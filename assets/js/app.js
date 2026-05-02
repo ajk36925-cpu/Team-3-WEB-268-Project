@@ -4,6 +4,7 @@
   const USER_KEY = 'rollsExpressCurrentUser';
   const ORDER_PREFS_KEY = 'rollsExpressOrderPrefs';
   const ORDER_CONFIRMATION_KEY = 'rollsExpressLastOrderConfirmation';
+  const LOYALTY_WELCOME_KEY = 'rollsExpressLoyaltyWelcome';
 
   const state = {
     menu: [],
@@ -157,14 +158,17 @@
           logoutButton.textContent = 'Log Out';
           authArea.appendChild(logoutButton);
         }
+         if (button.closest('header')) {
+        button.classList.add('re-cta--header');
+  }
       }
 
       if (state.currentUser) {
         button.textContent = `Hi, ${state.currentUser.name.split(' ')[0]}`;
+        button.classList.add('logged-in-btn');
         if (button.tagName === 'A') {
-          button.removeAttribute('href');
+          button.href = 'loyalty.html';
           button.style.cursor = 'default';
-          button.addEventListener('click', (e) => e.preventDefault());
         }
         button.setAttribute('title', 'You are signed in');
         button.setAttribute('aria-label', `Signed in as ${state.currentUser.name}`);
@@ -290,11 +294,11 @@
     overlay?.remove();
   }
 
-  function showModal({ title, subtitle = '', variant = 'success', actions = [], supportHtml = '' }) {
+  function showModal({ title, subtitle = '', variant = 'success', actions = [], supportHtml = '', compact = false }) {
     closeModal();
     const root = ensureModalRoot();
     const overlay = document.createElement('div');
-    overlay.className = 're-modal-overlay';
+    overlay.className = compact ? 're-modal-overlay re-modal-overlay--compact' : 're-modal-overlay';
     overlay.innerHTML = `
       <div class="re-modal-card" role="dialog" aria-modal="true" aria-label="${escapeHtml(title)}">
         <div class="re-modal-band"></div>
@@ -419,6 +423,50 @@
               }
             );
           }
+        }
+      ]
+    });
+  }
+
+  function getPagePath(pageName) {
+    return window.location.pathname.includes('/pages/') ? pageName : `pages/${pageName}`;
+  }
+
+  function redirectToLoyaltyWithWelcome(user) {
+    const firstName = String(user?.name || 'Guest').trim().split(' ')[0] || 'Guest';
+    localStorage.setItem(LOYALTY_WELCOME_KEY, JSON.stringify({ name: firstName }));
+    window.location.href = getPagePath('loyalty.html');
+  }
+
+  function showLoyaltyWelcomePopup() {
+    const raw = localStorage.getItem(LOYALTY_WELCOME_KEY);
+    if (!raw) return;
+    localStorage.removeItem(LOYALTY_WELCOME_KEY);
+
+    let name = 'Guest';
+    try {
+      name = JSON.parse(raw)?.name || name;
+    } catch (error) {
+      name = 'Guest';
+    }
+
+    showModal({
+      title: `Welcome ${name}!`,
+      subtitle: 'Thanks for being part of Rolls Express Rewards. What would you like to do next?',
+      variant: 'success',
+      compact: true,
+      actions: [
+        {
+          id: 'look-menu',
+          heading: '',
+          label: 'Look at Menu',
+          onClick: () => { window.location.href = 'menu.html'; }
+        },
+        {
+          id: 'order-now',
+          heading: '',
+          label: 'Order Now',
+          onClick: () => { window.location.href = 'order-online.html'; }
         }
       ]
     });
@@ -693,9 +741,9 @@
       if ((payload.password || '').length < 6) return setStatus(authMessage, 'Password must be at least 6 characters long.', 'danger');
 
       try {
-        await api('/api/auth/signup', { method: 'POST', body: JSON.stringify(payload) });
+        const response = await api('/api/auth/signup', { method: 'POST', body: JSON.stringify(payload) });
         signupForm.reset();
-        showSignupSuccessPopup();
+        redirectToLoyaltyWithWelcome(response.user || payload);
       } catch (error) {
         setStatus(authMessage, error.message, 'danger');
       }
@@ -712,8 +760,8 @@
       try {
         const response = await api('/api/auth/login', { method: 'POST', body: JSON.stringify(payload) });
         saveUserSession(response.token, response.user);
-        setStatus(authMessage, 'You are now logged in and your saved information is ready to use.', 'success');
         loginForm.reset();
+        redirectToLoyaltyWithWelcome(response.user);
       } catch (error) {
         setStatus(authMessage, error.message, 'danger');
         if (error.status === 401) {
@@ -901,6 +949,7 @@
     }
 
     await initLoginPage();
+    showLoyaltyWelcomePopup();
     initContactPage();
     initCateringPage();
   }

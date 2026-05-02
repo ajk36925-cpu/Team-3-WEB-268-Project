@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="assets/icons/favicon.png">
   <title>Rolls Express - Home</title>
 
   <!-- Bootstrap CSS (CDN) -->
@@ -29,7 +30,7 @@
         <!-- Logo LEFT -->
         <a class="re-logo text-decoration-none" href="index.html" aria-label="Rolls Express Home">
           <div class="re-logo-box">
-          <img src="assets/icons/logo.png" width="111" height="106" alt=""/> </div>
+          <img src="assets/icons/logo.png" width="111" height="106" alt=""/></div>
         </a>
 		  
 
@@ -133,9 +134,33 @@
 
         <div class="col-12 col-lg-5">
           <div class="re-orderbox re-orderbox--video hero-secondary hero-media">
-            <video class="re-orderbox-video" autoplay muted loop playsinline preload="auto" aria-label="Decorative looping restaurant video">
-              <source src="assets/video/246385.mp4" type="video/mp4" />
+            <video id="rollsVideo" class="re-orderbox-video" autoplay muted loop playsinline preload="auto" aria-label="Decorative looping restaurant video">
+              <source src="assets/video/rollsexpressvid.mp4" type="video/mp4" />
             </video>
+            <!-- Sound Toggle Button -->
+              <button id="soundToggle" class="sound-btn" aria-label="Toggle sound">
+                🔇
+              </button>
+
+            </div>
+            <script>
+            const video = document.getElementById("rollsVideo");
+            const btn = document.getElementById("soundToggle");
+
+            // Allow sound after ANY user click on the page
+            document.addEventListener("click", function enableSound() {
+              video.muted = false;
+              btn.textContent = "🔊";
+              document.removeEventListener("click", enableSound);
+            });
+
+            // Manual toggle button
+            btn.addEventListener("click", (event) => {
+              event.stopPropagation(); // prevents the page click handler from firing
+              video.muted = !video.muted;
+              btn.textContent = video.muted ? "🔇" : "🔊";
+            });
+          </script>
           </div>
         </div>
       </section>
@@ -166,7 +191,7 @@
 
       <!-- New Menu Items -->
 	  <div class ="main-section">
-      <section class="mt-4 mt-lg-5">
+      <section id="menu-items" class="mt-4 mt-lg-5">
         <h2 class="re-section-title text-center mb-4">New Menu Items</h2>
 
         <div class="row g-4">
@@ -223,6 +248,41 @@
           </div>
         </div>
       </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="re-testimonials-section mt-4 mt-lg-5" aria-labelledby="testimonialTitle">
+        <div class="text-center mb-4">
+          <p class="re-testimonials-eyebrow mb-2">Guest Favorites</p>
+          <h2 id="testimonialTitle" class="re-section-title">What Our Customers Are Saying</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <article class="re-testimonial-card h-100">
+              <div class="re-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="re-testimonial-text">"The rolls tasted fresh, colorful, and full of flavor. My order was ready fast and everything was packaged perfectly."</p>
+              <p class="re-testimonial-name mb-0">Maya R.</p>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="re-testimonial-card h-100">
+              <div class="re-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="re-testimonial-text">"Rolls Express has become my favorite lunch spot. The Dragon Fire roll has the perfect amount of heat."</p>
+              <p class="re-testimonial-name mb-0">Chris M.</p>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <article class="re-testimonial-card h-100">
+              <div class="re-stars" aria-label="4 out of 5 stars">★★★★<span class="re-star-muted">★</span></div>
+              <p class="re-testimonial-text">"The loyalty card is a fun bonus, and the pickup process was simple. I would definitely order again."</p>
+              <p class="re-testimonial-name mb-0">Jenna L.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       </div>
 
     </div>
@@ -237,7 +297,7 @@
           <div class="col-6">
             <a class="re-footerlink d-block mb-2" href="pages/locations.html">Locations</a>
             <a class="re-footerlink d-block mb-2" href="pages/about.html">About Us</a>
-            <a class="re-footerlink d-block re-footerlink-active" href="pages/contact.html">Contact Us</a>
+            <a class="re-footerlink d-block" href="pages/contact.html">Contact Us</a>
           </div>
           <div class="col-6">
             <a class="re-footerlink d-block mb-2" href="pages/loyalty.html">Loyalty Program</a>
@@ -253,6 +313,10 @@
           <a class="re-legal" href="pages/terms.html">Terms of Use</a>
           <a class="re-legal" href="pages/privacy.html">Privacy Policy</a>
         </div>
+		  
+		  <div class="mt-2">
+		<img src="assets/images/BAM_Logo.png" alt="BAM Logo" style="max-width: 80px;">
+	  </div>
       </div>
 
       <!-- CLEAN SOCIAL ICONS (only one set) -->
@@ -262,21 +326,21 @@
            href="https://www.facebook.com" 
            target="_blank" 
            rel="noopener noreferrer">
-          <img src="../assets/icons/facebook-brands-solid-full.svg" class="re-social-icon" alt="Facebook">
+          <img src="assets/icons/facebook-brands-solid-full.svg" class="re-social-icon" alt="Facebook">
         </a>
 
         <a class="re-social" 
            href="https://www.instagram.com" 
            target="_blank" 
            rel="noopener noreferrer">
-          <img src="../assets/icons/instagram-brands-solid-full.svg" class="re-social-icon" alt="Instagram">
+          <img src="assets/icons/instagram-brands-solid-full.svg" class="re-social-icon" alt="Instagram">
         </a>
 
         <a class="re-social" 
            href="https://www.tiktok.com" 
            target="_blank" 
            rel="noopener noreferrer">
-          <img src="../assets/icons/tiktok-brands-solid-full.svg" class="re-social-icon" alt="TikTok">
+          <img src="assets/icons/tiktok-brands-solid-full.svg" class="re-social-icon" alt="TikTok">
         </a>
 
       </div>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="../assets/icons/favicon.png">
   <title>Rolls Express - Catering</title>
 
   <!-- Bootstrap CSS -->
@@ -132,19 +133,19 @@
           <h2>Catering Form</h2>
 
           <form class="catering-form" method="post">
-            <label>Name:</label>
+            <label>Name: *</label>
             <input type="text" name="name" placeholder="Enter your name" required>
 
-            <label>Email:</label>
+            <label>Email: *</label>
             <input type="email" name="email" placeholder="Enter your email" required>
 
-            <label>Phone Number:</label>
+            <label>Phone Number: *</label>
             <input type="text" name="phone" placeholder="Enter your phone number" required>
 
-            <label>Address:</label>
+            <label>Address:&nbsp;</label>
             <input type="text" name="address" placeholder="Enter your address">
 
-            <label>Event Details:</label>
+            <label>Event Details: *</label>
             <textarea name="eventDetails" placeholder="Describe your event" required></textarea>
 
             <button type="submit" class="submit-btn">Submit Inquiry</button>
@@ -170,7 +171,7 @@
             <div class="col-6">
               <a class="re-footerlink d-block mb-2" href="loyalty.html">Loyalty Program</a>
               <a class="re-footerlink d-block mb-2" href="careers.html">Careers</a>
-              <a class="re-footerlink d-block" href="catering.html">Catering</a>
+              <a class="re-footerlink d-block re-footerlink-active" href="catering.html">Catering</a>
             </div>
           </div>
         </div>
@@ -181,6 +182,9 @@
             <a class="re-legal" href="terms.html">Terms of Use</a>
             <a class="re-legal" href="privacy.html">Privacy Policy</a>
           </div>
+			<div class="mt-2">
+		<img src="../assets/images/BAM_Logo.png" alt="BAM Logo" style="max-width: 80px;">
+	  </div>
         </div>
 
         <div class="col-12 col-lg-3 d-flex justify-content-lg-end justify-content-center gap-3">
